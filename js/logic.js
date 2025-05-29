@@ -1,6 +1,6 @@
 
 
-import { productsList } from "../data/productList.js";
+import { productsList } from "data/productList.js";
 
 const productItemsList = document.querySelector(".product-table");
 document.querySelector(".add-new-product-button").addEventListener("click", addProduct);
@@ -16,13 +16,13 @@ function displayProducts(products) {
       productItem.insertCell(1).textContent = product.productCategory;
       productItem.insertCell(2).textContent = `${product.productPrice}`;
       productItem.insertCell(3).innerHTML = `<img class="product-img" src=${product.productCompanyImage} /> ${product.productCompany}`;
-      productItem.insertCell(4).innerHTML = product.productStatus ? `<img src="../image/Instock.png" alt="In stock" />` : `<img src="../image/Outstock.png" alt="Out of stock" />`;
+      productItem.insertCell(4).innerHTML = product.productStatus ? `<img src="image/Instock.png" alt="In stock" />` : `<img src="image/Outstock.png" alt="Out of stock" />`;
 
       const editButton = document.createElement('button');
       editButton.value = product.productId;
       editButton.className = "edit-btn";
     //   editButton.textContent  = "Edit"
-      editButton.innerHTML = `<img src="../image/Pencil.png" alt="edit" />`;
+      editButton.innerHTML = `<img src="image/Pencil.png" alt="edit" />`;
       
   
       editButton.addEventListener("click", function(e) {
@@ -33,7 +33,7 @@ function displayProducts(products) {
       const deleteButton = document.createElement('button');
       deleteButton.value = product.productId; 
       deleteButton.className = "del-btn";
-      deleteButton.innerHTML =  `<img src="../image/Bin.png" alt="del" />`;
+      deleteButton.innerHTML =  `<img src="image/Bin.png" alt="del" />`;
 
       deleteButton.addEventListener("click", deleteProduct);
   
@@ -326,7 +326,7 @@ export function addProduct() {
       const editButton = document.createElement('button');
       editButton.value = productsList.length;
       editButton.className = "edit-btn";
-      editButton.innerHTML = `<img src="../image/Pencil.png" alt="edit" />`;
+      editButton.innerHTML = `<img src="image/Pencil.png" alt="edit" />`;
     //   editButton.textContent = "Edit";
   
       editButton.addEventListener("click", editProduct);
@@ -334,7 +334,7 @@ export function addProduct() {
       const deleteButton = document.createElement('button');
       deleteButton.value = productsList.length; 
       deleteButton.className = "del-btn";
-      deleteButton.innerHTML = `<img src="../image/Bin.png" alt="edit" />`;
+      deleteButton.innerHTML = `<img src="image/Bin.png" alt="edit" />`;
     //   deleteButton.textContent = "Delete";
 
       deleteButton.addEventListener("click", deleteProduct);
