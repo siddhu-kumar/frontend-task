@@ -1,6 +1,6 @@
 
 
-import { productsList } from "data/productList.js";
+import { productsList } from "../data/productList.js";
 
 const productItemsList = document.querySelector(".product-table");
 document.querySelector(".add-new-product-button").addEventListener("click", addProduct);
