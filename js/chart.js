@@ -1,5 +1,5 @@
 
-import { revenue, expense } from "../data/data";
+import { revenue, expense } from "../data/data.js";
 
 let yearExpenseData = expense
     .filter(ele => ele.year === 2025)

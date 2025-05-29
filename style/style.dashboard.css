@@ -20,6 +20,73 @@
 
 }
 
+
+.navbar {
+    background-color: var(--primary-background);
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 50pv;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* display: none; */
+}
+
+.logo {
+    color: var(--font-color);
+    font-size: large;       
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title {
+    height: 32px;
+    width: 142px;
+    line-height: 32px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: var(--font-color);
+    font: var(--poppins);
+}
+
+
+.navbar.open {
+    transform: translateX(0);
+}
+
+.navbar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: var(--font-color);
+}
+
+.navbar-links li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-links a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar-links a:hover {
+    color: rgb(198, 9, 110);
+}
+
+.menu {
+    padding: 10px;
+}
+
+
 .growth {
     background-color: var(--background--green);
     color: var(--font-green);
@@ -59,10 +126,14 @@ body {
     padding: 10px;
     font-family: var(--poppins);
 }
-.navbar {
+
+.dashboard {
+    margin-left: 250px;
+}
+
+.welcome {
     height: 50px;
     width: 100%;
-
 }
 
 .user-name {
