@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<link rel="stylesheet" href="../style/style.css">
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <span class="title"><img src="./image/Logo Icon.png" />Dashboard X </span>
+            <span class="toggle"> &gt; </span>
+        </div>
+        <div class="menu">
+            <ul class="navbar-links">
+                <li><img src="./image/dashboard-selected.png"/><a href="./dashboard/index.html">Dashboard</a></li>
+                <li><img src="./image/Star 5.png"/><a href="#">Product List</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="navbar-products">
+        <div class="title-search">
+            <div class="title-name">
+                Products List
+            </div>
+            <div class="search ">
+                <input type="text" class="search-input" placeholder="Search for product...">
+            </div>
+        </div>
+        <div class="add-to-cart">
+            <button type="button" class="add-new-product-button">
+                Add New Product
+            </button>
+        </div>
+        <div id="product-form-container" style="display: none;"></div>
+    </div>
+    <div class="product-list-main">
+        <div class="product-list-navbar">
+            <div>All Products</div>
+            <div>
+                <span class="current-page">1 - 9</span> of 
+                <span>total</span>
+            </div>
+        </div>
+        <div class="product-container">
+            <table class="product-table">
+                <tr class="product-field-list">
+                    <th><img src="./image/Star 5.png"/> Name</th>
+                    <th><img src="./image/category.png"/>Category</th>
+                    <th><img src="./image/dollar.png"/>Price</th>
+                    <th><img src="./image/company.png"/>Company</th>
+                    <th><img src="./image/status.png"/>Status</th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
+        <div class="bottom">
+            <div class="total-page">1-10 of 460</div>
+            <div class="each-page-item">
+                <div class="row-per-page">Row per page:</div>
+                <div class="row-per-page">9</div>
+                <div class="change-page">
+                    <div>&lt;-</div>
+                    <div>-&gt;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./js/add-product.js"></script>
+    <script type="module" src="./data/productList.js"></script>
+    <script type="module" src="./js/logic.js"></script>
+</body>
+</html>

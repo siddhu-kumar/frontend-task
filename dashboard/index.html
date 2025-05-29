@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<link rel="stylesheet" href="../style/style.dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<body>
+    <div class="navbar">
+        <span class="user-name">Welcome back, John</span>
+        <span class="user-profile-content">Measure your advertising ROI and report website traffic</span>
+    </div>
+    <div class="dashboard-view">
+        <div class="dashboard-view-entries" id="page-view">
+            <div class="dashboard-name">
+                <div><img src="../image/Views Icon.png"/></div>
+                <div>Pageviews</div>
+            </div>
+            <div class="dashboard-data">
+                <div class="dashboard-data-K">50.8K</div>
+                <div class="dashboard-data-percent growth">28.4% <img src="../image/Arrow External Right Up.png"/> </div>
+            </div>
+        </div>
+        <div class="dashboard-view-entries" id="months-user">
+            <div class="dashboard-name">
+                <div><img src="../image/Users Icon.png"/></div>
+                <div>Monthly users</div>
+            </div>
+            <div class="dashboard-data">
+                <div class="dashboard-data-K">23.6K</div>
+                <div class="dashboard-data-percent loss">12.6% <img src="../image/Arrow External Right.png"/> </div>
+            </div>
+        </div>
+        <div class="dashboard-view-entries" id="new-sign-up">
+            <div class="dashboard-name">
+                <div><img src="../image/Signups Icon.png"/></div>
+                <div>New sign up</div>
+            </div>
+            <div class="dashboard-data">
+                <div class="dashboard-data-K">756</div>
+                <div class="dashboard-data-percent growth">3.1% <img src="../image/Arrow External Right Up.png"/> </div>
+            </div>
+        </div>
+        <div class="dashboard-view-entries" id="subscriptions">
+            <div class="dashboard-name">
+                <div><img src="../image/Star 5.png"/></div>
+                <div>Subscriptions</div>
+            </div>
+            <div class="dashboard-data">
+                <div class="dashboard-data-K">2.3K</div>
+                <div class="dashboard-data-percent growth">11.3% <img src="../image/Arrow External Right Up.png"/></div>
+            </div>
+        </div>
+    </div>
+    <div class="graph-dashboard">
+        <div class="total-revenue">
+            <div class="total-revenue-nav">
+                <div class="dashboard-revenue-data" id="subscriptions">
+                    <div class="dashboard-name">
+                        <div>Total revenue</div>
+                    </div>
+                    <div class="dashboard-data">
+                        <div class="dashboard-data-K">$240K</div>
+                        <div class="dashboard-data-percent growth">24.6%  <img src="../image/Arrow External Right Up.png"/></div>
+                    </div>
+                </div>
+                <div class="total-revenue-description">
+                    <div class="revenue-icon"><span class="dot"></span>Revenue</div>
+                    <div class="revenue-icon"><span class="ex-dot"></span>Expense</div>
+                    <div class="filter-by-year">
+                        <form for="" class="drop-down-year">
+                            <select name="year-data" id="year-data">
+                                <option value="2025">Jan 2025 - Dec 2025 </option>
+                                <option value="2024">Jan 2024 - Dec 2024 </option>
+                                <option value="2023">Jan 2023 - Dec 2023 </option>
+                                <option value="2022">Jan 2022 - Dec 2022 </option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="revenue-graph">
+                <canvas id="myLineChart"></canvas>
+                
+            </div>
+        </div>
+        <div class="profit-session">
+            <div class="total-profit">
+                <div class="dashboard-profit-data">
+                    <div class="dashboard-name">
+                        <div><img src="../image/profit.png"/></div>
+                        <div>Total profit</div>
+                    </div>
+                    <div class="dashboard-data">
+                        <div class="dashboard-data-K">$144.6K</div>
+                        <div class="dashboard-data-percent growth">28.5%  <img src="../image/Arrow External Right Up.png"/></div>
+                    </div>
+                </div>
+                <div class="profit-graph-area">
+                    <div class="bar-chart" id="barChart"></div>
+
+                </div>
+                <div class="profit-data-period">
+                    Last 12 months
+                </div>
+            </div>
+            <div class="total-sessions">
+                <div class="dashboard-sessions-data">
+                    <div class="dashboard-name">
+                        <div><img src="../image/sessions.png"/></div>
+                        <div>Total sessions</div>
+                    </div>
+                    <div class="dashboard-data">
+                        <div class="dashboard-data-K">400</div>
+                        <div class="dashboard-data-percent growth">16.8%  <img src="../image/Arrow External Right Up.png"/></div>
+                    </div>
+                </div>
+                <div class="profit-graph-area">session graph</div>
+                <div class="sessions-live">
+                    <div class="session-count-img">.Live</div>
+                    <div class="session-visitors">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="../data/data.js"></script>
+<script type="module" src="../js/script.js"></script>
+<script type="module" src="../js/chart.js"></script>
+</html>

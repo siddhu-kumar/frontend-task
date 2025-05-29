@@ -1,0 +1,330 @@
+:root {
+    --primary-background-color: #CB3CFF;
+    --hover-background: #990ACD;
+    --active-background: #67009B;
+    --font-color: #FFFFFF;
+    --font-color-2: #AEB9E1;
+    --poppins: sans-serif;
+    --primary-background: #081028;
+    --secondary-background: #0B1739;
+    --border-style: 0.6px solid #343B4F;
+    --background-gray: #F1F1F333;
+    --border-style-green: 0.6px solid #05C168;
+    --background--green: #05C16833;
+    --background--red:  #FF5A6533;
+
+    --font-green: #05C168;
+    --font-red:  #FF5A65;
+    --poppins: sans-serif;
+    --bar-background: #00C2FF;
+
+}
+
+.growth {
+    background-color: var(--background--green);
+    color: var(--font-green);
+    height: inherit;
+    width: inherit;
+    border-radius: 3px;
+    border: var(--border-style);
+}
+
+.loss {
+    background-color: var(--background--red);
+    color: var(--font-red);
+    height: inherit;
+    width: inherit;
+    border-radius: 3px;
+    border: var(--border-style);
+}
+
+#myLineChart {
+    background-color: var(--secondary-background);
+    width: 100%; /* Make the canvas take the full width of the container */
+    height: 100%; /* Make the canvas take the full height of the container */
+}
+
+.revenue-graph {
+    bottom: 0;
+      width: 60%; /* Set the width of the container */
+    height: 400px; /* Set the height of the container */
+    position: absolute;
+    margin: auto; /* Center the container */
+}
+
+body {
+    background-color: var(--primary-background);
+    color: var(--font-color);
+    margin: 10px;
+    padding: 10px;
+    font-family: var(--poppins);
+}
+.navbar {
+    height: 50px;
+    width: 100%;
+
+}
+
+.user-name {
+    height: 25px;
+    width: 100%;
+    font-size: larger;
+    display: inline-block;
+}
+
+.user-profile-content {
+    display: inline-block;
+    width: 100%;
+    font-size: small;
+    letter-spacing: 0;
+    color: var(--font-color-2);
+}
+
+.dashboard-view {
+    width: 1057px;
+    height: 130px;
+    top: -0.03px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.dashboard-view-entries {
+    width: 252px;
+    height: 130px;
+    top: -0.03px;
+    left: 268.18px;
+
+    display: flex;
+    background-color: var(--secondary-background);
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    border: var(--border-style);
+    margin-right: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
+}  
+
+.drop-down-year {
+    width: 200px;      /* Set desired width */
+    height: 35px;      /* Set desired height */
+    margin: 10px 0;    /* Optional: add some spacing */
+}
+
+.drop-down-year select {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--primary-background);
+    color: var(--font-color);
+    border: var(--border-style);
+    border-radius: 6px;
+
+}
+
+.dashboard-name {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+    color: var(--font-color-2);
+}
+
+.dashboard-data {
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard-data-K {
+    font-size: large;
+    font-family: var(--poppins);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0px;
+
+}
+
+.dashboard-data-percent {
+    width: inherit;
+    height: inherit;
+    border: var(--border-style);
+    font-size: smaller;
+    margin: auto;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.graph-dashboard {
+       width: 1057px;
+    height: 557px;
+    position: relative;
+    top: 30px;
+    left: -0.5px;
+    border: var(--border-style);
+    display: flex;
+    border-radius: 8px;
+    background-color: var(--secondary-background);
+}
+
+.total-revenue {
+    width: 682px;
+    height: 517px;
+    /* margin: 25px; */
+    margin-top: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: var(--border-style);
+}
+
+.revenue-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--font-color-2);
+  gap: 6px; 
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--font-green);
+  border-radius: 50%; 
+  display: inline-block;
+}
+
+.ex-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary-background-color);
+}
+
+
+.total-revenue-nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-revenue-data {
+    width: 200px;
+    height: 80px;
+    min-width: 250px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-right: 20px; */
+    border-radius: 10px;
+    /* padding-left: 10px; */
+}  
+
+.total-revenue-description {
+    display: flex;
+    flex-direction: row;
+    /* width: 300px; */
+    height: 40px;
+    justify-content: center;
+    /* border: 1px solid white; */
+    gap: 10px;
+}
+
+.filter-by-year {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+}
+
+.profit-session {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 20px 0;
+}
+
+.total-profit {
+    width: 314px;
+    height: 278px;
+    top: 146.98px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    /* padding-left: 15px; */
+    justify-content: space-between;
+    border-bottom: var(--border-style);
+}
+
+.total-sessions {
+
+    width: 374px;
+    height: 278px;
+    top: 146.48px;
+    left: 682.44px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding-left: 15px;
+    justify-content: space-between;
+}
+
+.dashboard-profit-data {
+    width: 200px;
+    height: 80px;
+    min-width: 250px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-right: 20px; */
+    border-radius: 10px;
+    /* padding-left: 10px; */
+}  
+.dashboard-sessions-data {
+    width: 200px;
+    height: 80px;
+    min-width: 250px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-right: 20px; */
+    border-radius: 10px;
+    /* padding-left: 10px; */
+}  
+
+.sessions-live {
+    display: flex;
+}
+
+.profit-graph-area {
+    max-width: 600px;
+    /* margin: auto; */
+}
+
+.bar-chart {
+    display: flex;
+    align-items: flex-end; 
+    gap: 3px; 
+}
+
+.bar {
+    width: 5px; 
+    background-color: var(--bar-background);
+    
+}
+
+.bar.expense {
+    background-color: var(--primary-background-color); 
+}
+
