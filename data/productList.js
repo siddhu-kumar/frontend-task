@@ -17,7 +17,7 @@ let productsList = [
         productPrice: 500,
         productCompany: "Webflow",
         productStatus: false,
-        productImage: "./image/mobile.png"
+        productImage: "image/mobile.png"
     },
     {
         productId: 3,
